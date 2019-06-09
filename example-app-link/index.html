@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+  <p><a id="scopeLink" style="font-size:64px;" href="stethoscope://">Stethoscope App</a></p>
+  <p id="result" style="font-size:64px;"></p>
+  <p id="resultDecode" style="font-size:64px;"></p>
+  <iframe id="appLink" width="1" height="1" style="visibility:hidden"></iframe>
+  <script>
+    (function () { 
+      var appParameters = {
+          r: window.location.href, 
+          q: 'query ValidateMobileDevice($policy: MobileDevicePolicy!) { mobileDevice { deviceId deviceName platform, osVersion, hardwareModel, hardwareSerial, manufacturer, brand, stethoscopeVersion, deviceLocale, deviceCountry, security { osVersion pinOrFingerprintSet verifiedOs } } policy { validateWithDetails(policy: $policy) { status osVersion pinOrFingerprintSet verifiedOs } } }', 
+          p: '{"policy":{"osVersion":{"ios":">=11.0", "android":">=8.0.0"},"pinOrFingerprintSet":"ALWAYS","verifiedOs":"ALWAYS"}}'
+      };
+      var scopeAppLink = "stethoscope://"+btoa(JSON.stringify(appParameters));
+      document.getElementById("scopeLink").href = scopeAppLink;
+      decodeAndPresentReturnHashData();
+      window.addEventListener("hashchange", decodeAndPresentReturnHashData, false);
+
+      function decodeAndPresentReturnHashData() {
+        var hash = window.location.hash;
+        var hashVal = hash.replace("#deviceInfo=", "");
+        document.getElementById("result").innerHTML = "Incomming hash: "+hash;
+        document.getElementById("resultDecode").innerHTML = "Decoded device info: "+atob(hashVal);
+      }
+
+      // Send to app store if it doesn't open
+      // document.getElementById("appLink").src = "stethoscope://";
+      // setTimeout(function() {
+      //     window.location = "https://itunes.apple.com/us/app/my.app/id123456789?ls=1&mt=8";
+      // }, 500);
+    })();
+  </script>
+</body>
+</html>
