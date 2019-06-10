@@ -6,7 +6,7 @@
 <img src="docs/screenshot.png" alt="Stethoscope Mobile App screenshot" width="600">
 </center>
 
-The Stethoscope Mobile App is a native mobile application created by Netflix that checks security-related settings and makes recommendations for improving the configuration of your Android or iOS device. This project is currently in an expiremental / proof of concept phase. We hope to eventaully introduce this app to our employees and partners, but we've decided to open source it in the mean time as there has been a lot of interest in the idea from the community. 
+The Stethoscope Mobile App is a native mobile application created by Netflix that checks security-related settings and makes recommendations for improving the configuration of your Android or iOS device. This project is currently in an experimental / proof of concept phase. We hope to eventually introduce this app to our employees and partners, but we've decided to open source it in the meantime as there has been a lot of interest in the idea from the community. We would love to hear from you if you've been working on something similar or would like to collaborate!
 
 Opening the app will run a quick check of your device configuration and present recommendations and instructions.
 

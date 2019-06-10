@@ -1,6 +1,6 @@
 # Stethoscope Mobile App Device Information Collection
 
-The Stethoscope Mobile app allows predefinend sites to request information about a device via the app link. 
+The Stethoscope Mobile app allows predefined sites to request information about a device via the app link. 
 Allowed sites are defined in [constants.js](constants.js#1-5). 
 
 Requesting Device Information
@@ -19,7 +19,7 @@ var scopeAppLink = "stethoscope://"+btoa(JSON.stringify(appParameters));
 
 In the encoded JSON sent with the app link the following three parameters must be included: 
 * r: Return url where the app will re-open with the device query response. Generally this will be the location of the current window. 
-* q: Query, this is a GraphQL query that contains the information about the device that you would like to recieve back. 
+* q: Query, this is a GraphQL query that contains the information about the device that you would like to receive back. 
 * p: Policy, this is a JSON defined policy that describes the desired state of a device.
 
 

@@ -1,6 +1,6 @@
 # Queries 
 
-The Stethoscope Mobile app uses GraphQL to execute requests for device information. The availible data is defined in the [Schema](../graphql/schema.js).
+The Stethoscope Mobile app uses GraphQL to execute requests for device information. The available data is defined in the [Schema](../graphql/schema.js).
 The default query that the app will execute is defined in [constants.js](../constants.js) as:
 ```graphql
 query ValidateMobileDevice($policy: MobileDevicePolicy!) {
