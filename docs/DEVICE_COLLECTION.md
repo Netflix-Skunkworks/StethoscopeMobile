@@ -1,7 +1,7 @@
 # Stethoscope Mobile App Device Information Collection
 
 The Stethoscope Mobile app allows predefined sites to request information about a device via the app link. 
-Allowed sites are defined in [constants.js](constants.js#L1-L5). 
+Allowed sites are defined in [constants.js](../constants.js#L1-L5). 
 
 Requesting Device Information
 -----------------------------
