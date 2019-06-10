@@ -1,7 +1,7 @@
 # Queries 
 
 The Stethoscope Mobile app uses GraphQL to execute requests for device information. The available data is defined in the [Schema](../graphql/schema.js).
-The default query that the app will execute is defined in [constants.js](../constants.js) as:
+The default query that the app will execute is defined in [constants.js](../constants.js#L32-L61) as:
 ```graphql
 query ValidateMobileDevice($policy: MobileDevicePolicy!) {
   mobileDevice { 
@@ -36,7 +36,7 @@ The query takes a policy argument.
 
 # Policies
 
-Policies are a declarative way to describe your organization's security recommendations for Mobile devices. The default policy is  defined in [constants.js](../constants.js) as:
+Policies are a declarative way to describe your organization's security recommendations for Mobile devices. The default policy is  defined in [constants.js](../constants.js#L63-L72) as:
 ```graphql
   "policy": {
     "osVersion": {
@@ -74,7 +74,7 @@ input PlatformStringRequirement {
 
 ### RequirementOption
 
-The `RequirementOption` enum contains the following `ALWAYS`, `SUGGESTED`, `NEVER`, `IF_SUPPORTED` [schema](../graphql/schema.js#L86-92)
+The `RequirementOption` enum contains the following `ALWAYS`, `SUGGESTED`, `NEVER`, `IF_SUPPORTED` [schema](../graphql/schema.js#L86-L92)
 
  If the requirement is `ALWAYS`, the user will only pass this practice if their setting is enabled
 
